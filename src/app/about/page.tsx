@@ -10,14 +10,14 @@ export default function AboutPage() {
   const founders = [
     {
       name: "Sri Nidhi Rajpoot",
-      role: "Co-Founder, Financier & CEO",
+      role: "Founder, Financier & CEO",
       bio: "Sri Nidhi Rajpoot serves as Financier & CEO. She directs executive strategy, commercial investments, international space accords, and orbital station infrastructure deployment.",
       avatar: "SR",
       gradient: "from-blue-700 via-indigo-800 to-slate-900",
     },
     {
       name: "N. Prem Kumar",
-      role: "Co-Founder & Chief Metallurgist",
+      role: "Chief Metallurgist",
       bio: "N. Prem Kumar serves as Chief Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
       avatar: "PK",
       gradient: "from-slate-800 via-zinc-900 to-black",
@@ -38,10 +38,10 @@ export default function AboutPage() {
       gradient: "from-slate-700 to-zinc-900",
     },
     {
-      name: "Verma Raju",
-      role: "Materials Appraiser & Quality Lead",
-      avatar: "VR",
-      gradient: "from-emerald-700 to-teal-900",
+      name: "Dhanunjaya",
+      role: "Chief Legal Adviser",
+      avatar: "DJ",
+      gradient: "from-purple-800 to-slate-950",
     },
     {
       name: "S. Govind Rao",
@@ -50,10 +50,10 @@ export default function AboutPage() {
       gradient: "from-cyan-700 to-blue-900",
     },
     {
-      name: "Dhanunjaya",
-      role: "Chief Legal Adviser",
-      avatar: "DJ",
-      gradient: "from-purple-800 to-slate-950",
+      name: "Verma Raju",
+      role: "Materials Appraiser & Quality Lead",
+      avatar: "VR",
+      gradient: "from-emerald-700 to-teal-900",
     },
   ];
 
@@ -188,7 +188,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed pt-2">
               <p className="font-bold text-gray-900 text-base">
-                Founded by Sri Nidhi Rajpoot and N. Prem Kumar.
+                Founded by Sri Nidhi Rajpoot.
               </p>
               <p>
                 <strong className="text-gray-900">Sri Nidhi Rajpoot</strong> is the Financier & CEO. She previously directed commercial engineering services, spaceflight mission investments, and commercial utilization of low-Earth orbit.
@@ -224,46 +224,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: LEADERSHIP TEAM GRID */}
-      <section id="team" className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
-              Leadership Team
-            </h2>
-            <div className="w-16 h-0.5 bg-orange-500" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leadershipTeam.map((member, idx) => (
-              <div
-                key={idx}
-                className="space-y-3 group cursor-pointer"
-                onClick={() => openInquiryModal(`Executive Leadership Inquiry: ${member.name}`)}
-              >
-                <div className={`relative h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-6 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
-                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-2xl shadow-lg">
-                    {member.avatar}
-                  </div>
-                  <div className="pt-4 space-y-1">
-                    <h3 className="text-lg font-black text-white">{member.name}</h3>
-                    <p className="text-xs font-mono text-cyan-200 uppercase font-semibold">{member.role}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-0.5">
-                  <h4 className="text-sm font-black text-gray-900 group-hover:text-orange-500 transition-colors">
-                    {member.name}
-                  </h4>
-                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: FOREIGN / INTERNATIONAL OPERATIONS TEAM GRID */}
+      {/* SECTION 4: FOREIGN / INTERNATIONAL OPERATIONS TEAM GRID */}
       <section id="foreign-team" className="py-24 px-6 sm:px-8 bg-[#f8fafc] text-gray-900 border-b border-gray-200">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="space-y-3">
@@ -301,6 +262,48 @@ export default function AboutPage() {
                   </div>
                   <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
                   <p className="text-[10px] font-mono text-blue-600 font-bold uppercase">{member.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: INDIAN LEADERSHIP TEAM GRID */}
+      <section id="team" className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="space-y-3">
+            <div className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-mono font-bold uppercase tracking-widest">
+              INDIAN OPERATIONS &amp; LEADERSHIP
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+              Indian Leadership Team
+            </h2>
+            <div className="w-16 h-0.5 bg-orange-500" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {leadershipTeam.map((member, idx) => (
+              <div
+                key={idx}
+                className="space-y-3 group cursor-pointer"
+                onClick={() => openInquiryModal(`Executive Leadership Inquiry: ${member.name}`)}
+              >
+                <div className={`relative h-64 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-5 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-xl shadow-lg">
+                    {member.avatar}
+                  </div>
+                  <div className="pt-3 space-y-1">
+                    <h3 className="text-base font-black text-white">{member.name}</h3>
+                    <p className="text-[11px] font-mono text-cyan-200 uppercase font-semibold leading-tight">{member.role}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-0.5">
+                  <h4 className="text-sm font-black text-gray-900 group-hover:text-orange-500 transition-colors">
+                    {member.name}
+                  </h4>
+                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
                 </div>
               </div>
             ))}

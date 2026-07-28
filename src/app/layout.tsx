@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.className} bg-black text-white antialiased selection:bg-blue-600 selection:text-white`}>
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} bg-black text-white antialiased selection:bg-blue-600 selection:text-white`} suppressHydrationWarning>
         <ContentProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>

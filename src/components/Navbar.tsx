@@ -131,6 +131,7 @@ export const Navbar = () => {
                 : "text-gray-300 hover:text-white hover:bg-white/10"
             }`}
             aria-label="Search"
+            suppressHydrationWarning
           >
             <Search className="w-5 h-5" />
           </button>
@@ -145,6 +146,7 @@ export const Navbar = () => {
             className={`p-2 ${
               scrolled ? "text-gray-700 hover:text-black" : "text-gray-300 hover:text-white"
             }`}
+            suppressHydrationWarning
           >
             <Search className="w-5 h-5" />
           </button>
@@ -153,6 +155,7 @@ export const Navbar = () => {
             className={`p-2 ${
               scrolled ? "text-gray-700 hover:text-black" : "text-gray-300 hover:text-white"
             }`}
+            suppressHydrationWarning
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />

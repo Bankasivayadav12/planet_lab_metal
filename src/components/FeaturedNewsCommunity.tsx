@@ -85,10 +85,12 @@ export const FeaturedNewsCommunity = () => {
                 placeholder="Email Address"
                 required
                 className="flex-1 bg-white border border-gray-300 rounded-full px-6 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-black shadow-sm"
+                suppressHydrationWarning
               />
               <button
                 type="submit"
                 className="px-8 py-3 rounded-full bg-black hover:bg-gray-800 text-white font-bold text-xs tracking-wider uppercase transition-colors shadow-md flex-shrink-0"
+                suppressHydrationWarning
               >
                 JOIN
               </button>

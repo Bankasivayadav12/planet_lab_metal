@@ -82,6 +82,7 @@ export const Footer = () => {
             <button
               onClick={() => openInquiryModal("Report a Concern")}
               className="block text-slate-100 hover:text-cyan-300 font-semibold transition-colors text-left"
+              suppressHydrationWarning
             >
               Report a Concern
             </button>
@@ -135,18 +136,23 @@ export const Footer = () => {
           <div className="lg:col-span-3 lg:border-l lg:border-white/30 lg:pl-6 space-y-6 pt-4 lg:pt-0">
             <div className="space-y-1.5">
               <span className="text-xs text-cyan-300 font-bold uppercase tracking-widest block">
-                IMAGE
+                EMAIL
               </span>
-              <p className="text-slate-200 text-xs sm:text-sm font-light leading-relaxed">
-                Captured from the station&apos;s Cupola windows, the Moon appears along the horizon of Earth.
-              </p>
+              <a
+                href="mailto:contact@planetlabsmetals.com"
+                className="text-white hover:text-cyan-300 text-xs sm:text-sm font-semibold transition-colors block"
+              >
+                contact@planetlabsmetals.com
+              </a>
             </div>
             <div className="space-y-1.5 pt-3 border-t border-white/20">
               <span className="text-xs text-cyan-300 font-bold uppercase tracking-widest block">
-                PICTURED
+                ADDRESS
               </span>
-              <p className="text-white text-xs sm:text-sm font-bold">
-                Moon, Earth, Planet Labs & Metals Station
+              <p className="text-slate-200 text-xs sm:text-sm font-light leading-relaxed">
+                45 Harrison Street, 4th Floor,<br />
+                San Francisco, California 94107,<br />
+                United States.``
               </p>
             </div>
           </div>
@@ -155,7 +161,7 @@ export const Footer = () => {
         {/* Bottom Copyright & Legal Links */}
         <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm font-mono text-slate-300 space-y-4 md:space-y-0">
           <div>
-            © {new Date().getFullYear()} Planet Labs & Metals, Inc. All rights reserved. Houston, Texas.
+            © {new Date().getFullYear()} Planet Labs & Metals, Inc. All rights reserved.
           </div>
           <div className="flex space-x-6 font-semibold">
             <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
