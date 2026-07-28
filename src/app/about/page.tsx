@@ -57,6 +57,79 @@ export default function AboutPage() {
     },
   ];
 
+  const foreignTeam = [
+    {
+      name: "Hans Müller",
+      role: "VP of European Operations & Orbital Engineering",
+      avatar: "HM",
+      gradient: "from-blue-800 to-indigo-950",
+      location: "Germany / Switzerland",
+    },
+    {
+      name: "Lukas Schmidt",
+      role: "Senior Director of Microgravity Refineries",
+      avatar: "LS",
+      gradient: "from-slate-800 to-zinc-900",
+      location: "Germany",
+    },
+    {
+      name: "Leon Fischer",
+      role: "Head of Orbital Thermal & Power Systems",
+      avatar: "LF",
+      gradient: "from-teal-800 to-slate-900",
+      location: "Switzerland",
+    },
+    {
+      name: "Max Weber",
+      role: "Lead Quantum Materials Scientist",
+      avatar: "MW",
+      gradient: "from-cyan-800 to-blue-950",
+      location: "Germany",
+    },
+    {
+      name: "Paul Wagner",
+      role: "Director of Sovereign Mission Accords",
+      avatar: "PW",
+      gradient: "from-indigo-800 to-slate-900",
+      location: "Austria",
+    },
+    {
+      name: "Felix Becker",
+      role: "Chief Automation & Robotics Engineer",
+      avatar: "FB",
+      gradient: "from-purple-800 to-slate-950",
+      location: "Germany",
+    },
+    {
+      name: "Jonas Hoffmann",
+      role: "Lead Spacecraft Systems Architect",
+      avatar: "JH",
+      gradient: "from-blue-900 to-slate-900",
+      location: "Switzerland",
+    },
+    {
+      name: "Tim Schneider",
+      role: "Director of Cryogenic Fuel Systems",
+      avatar: "TS",
+      gradient: "from-emerald-800 to-slate-950",
+      location: "Germany",
+    },
+    {
+      name: "Noah Braun",
+      role: "Senior Flight Payload Specialist",
+      avatar: "NB",
+      gradient: "from-slate-800 to-gray-900",
+      location: "Luxembourg",
+    },
+    {
+      name: "Emil Klein",
+      role: "European Logistics & Infrastructure Lead",
+      avatar: "EK",
+      gradient: "from-blue-800 to-slate-900",
+      location: "Germany",
+    },
+  ];
+
   return (
     <div className="pt-24 space-y-0 bg-[#050608] text-white">
       {/* SECTION 1: HERO (DARK SPACE WITH SUBTLE GRID) */}
@@ -151,7 +224,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: LEADERSHIP TEAM GRID (WHITE LIGHT MATCHING SCREENSHOTS 2 & 3) */}
+      {/* SECTION 4: LEADERSHIP TEAM GRID */}
       <section id="team" className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="space-y-3">
@@ -190,20 +263,65 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: CONTACT EXECUTIVE LEADERSHIP (WHITE LIGHT) */}
+      {/* SECTION 5: FOREIGN / INTERNATIONAL OPERATIONS TEAM GRID */}
+      <section id="foreign-team" className="py-24 px-6 sm:px-8 bg-[#f8fafc] text-gray-900 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="space-y-3">
+            <div className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-bold uppercase tracking-widest">
+              EUROPEAN &amp; INTERNATIONAL OPERATIONS
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+              Foreign &amp; International Engineering Team
+            </h2>
+            <div className="w-16 h-0.5 bg-blue-600" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {foreignTeam.map((member, idx) => (
+              <div
+                key={idx}
+                className="space-y-3 group cursor-pointer"
+                onClick={() => openInquiryModal(`International Team Inquiry: ${member.name}`)}
+              >
+                <div className={`relative h-64 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-5 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-xl shadow-lg">
+                    {member.avatar}
+                  </div>
+                  <div className="pt-3 space-y-1">
+                    <h3 className="text-base font-black text-white">{member.name}</h3>
+                    <p className="text-[11px] font-mono text-cyan-200 uppercase font-semibold leading-tight">{member.role}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-0.5">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-sm font-black text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {member.name}
+                    </h4>
+                  </div>
+                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
+                  <p className="text-[10px] font-mono text-blue-600 font-bold uppercase">{member.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: CONTACT EXECUTIVE LEADERSHIP (WHITE LIGHT) */}
       <section className="py-20 px-6 sm:px-8 bg-[#e8e9ec] text-gray-900 text-center border-t border-gray-200">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900">
-            Connect with Executive Leadership
+            Connect with Executive Leadership &amp; International Offices
           </h2>
           <p className="text-sm text-gray-600 font-normal">
-            For strategic partnerships, sovereign accords, and commercial inquiry.
+            For strategic partnerships, sovereign accords, and commercial inquiry across North America &amp; Europe.
           </p>
           <button
-            onClick={() => openInquiryModal("Executive Leadership Direct Contact")}
+            onClick={() => openInquiryModal("Executive Leadership & International Direct Contact")}
             className="px-9 py-4 rounded-full bg-black hover:bg-orange-600 text-white font-bold text-xs tracking-wider uppercase transition-colors shadow-lg"
           >
-            Contact Executive Leadership
+            Contact Executive &amp; International Leadership
           </button>
         </div>
       </section>
