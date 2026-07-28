@@ -68,24 +68,6 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <Link
-              href="/solutions"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white font-bold text-sm tracking-wider hover:brightness-110 transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] flex items-center space-x-3 group"
-            >
-              <span>EXPLORE SOLUTIONS</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-
-            <button
-              onClick={() => openInquiryModal("Commercial Flight & Metals Inquiry")}
-              className="px-8 py-4 rounded-full border border-cyan-400/40 bg-slate-900/60 backdrop-blur-xl text-white font-semibold text-sm tracking-wider hover:bg-white/15 transition-all duration-300 flex items-center space-x-2 shadow-lg"
-            >
-              <ShieldCheck className="w-4 h-4 text-cyan-400" />
-              <span>BOOK MISSION</span>
-            </button>
-          </div>
         </div>
 
         <div className="lg:col-span-4 hidden lg:block" />
