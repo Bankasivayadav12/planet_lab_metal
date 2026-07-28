@@ -187,9 +187,9 @@ export default function SpaceflightPage() {
       : missions.filter((m) => m.category.toUpperCase().includes(activeTab) || m.status.includes(activeTab));
 
   return (
-    <div className="pt-24 space-y-0 bg-[#050608] text-white min-h-screen">
-      {/* HERO SECTION */}
-      <section className="relative py-24 px-6 sm:px-8 border-b border-white/10 overflow-hidden">
+    <div className="pt-24 space-y-0 bg-[#050608] min-h-screen">
+      {/* 1. HERO SECTION (BLACK BACKGROUND) */}
+      <section className="relative py-24 px-6 sm:px-8 bg-[#050608] text-white border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/astronaut_mission.png"
@@ -255,15 +255,15 @@ export default function SpaceflightPage() {
         </div>
       </section>
 
-      {/* FILTER & MISSIONS GRID */}
-      <section className="py-24 px-6 sm:px-8 bg-black">
+      {/* 2. FILTER & MISSIONS GRID (WHITE BACKGROUND) */}
+      <section className="py-24 px-6 sm:px-8 bg-[#f8fafc] text-gray-900 border-b border-gray-200">
         <div className="max-w-7xl mx-auto space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-300 pb-8">
             <div className="space-y-2">
-              <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase font-bold">
+              <span className="text-xs font-mono tracking-widest text-blue-600 uppercase font-bold">
                 FLIGHT MANIFEST &amp; HERITAGE
               </span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+              <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
                 Mission Portfolio
               </h2>
             </div>
@@ -276,8 +276,8 @@ export default function SpaceflightPage() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-5 py-2.5 rounded-full text-xs font-mono font-semibold tracking-wider transition-all ${
                     activeTab === tab
-                      ? "bg-cyan-500 text-black shadow-lg"
-                      : "bg-white/5 text-slate-300 hover:bg-white/15 border border-white/10"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-300 shadow-sm"
                   }`}
                 >
                   {tab === "ALL" ? "ALL MISSIONS" : `${tab} MISSIONS`}
@@ -292,10 +292,10 @@ export default function SpaceflightPage() {
               <div
                 key={mission.id}
                 onClick={() => setSelectedMission(mission)}
-                className="group relative rounded-3xl bg-[#0b0e14] border border-white/15 hover:border-cyan-500/60 overflow-hidden shadow-xl hover:shadow-[0_0_35px_rgba(6,182,212,0.25)] transition-all duration-300 flex flex-col justify-between cursor-pointer"
+                className="group relative rounded-3xl bg-white border border-slate-200/80 hover:border-blue-600 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
               >
                 {/* Image */}
-                <div className="relative h-56 w-full overflow-hidden bg-slate-950">
+                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                   <Image
                     src={mission.image}
                     alt={mission.name}
@@ -303,22 +303,22 @@ export default function SpaceflightPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-transparent to-black/40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-cyan-500/40 text-[10px] font-mono font-bold text-cyan-300 uppercase">
+                    <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-cyan-300 uppercase">
                       {mission.codeName}
                     </span>
                   </div>
 
                   <div className="absolute top-4 right-4">
                     <span
-                      className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold border ${
+                      className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold border backdrop-blur-md ${
                         mission.status === "COMPLETED"
-                          ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
+                          ? "bg-emerald-500/90 text-white border-emerald-400"
                           : mission.status.includes("ACTIVE")
-                          ? "bg-cyan-500/20 text-cyan-300 border-cyan-500/40 animate-pulse"
-                          : "bg-amber-500/20 text-amber-300 border-amber-500/40"
+                          ? "bg-blue-600 text-white border-blue-400 animate-pulse"
+                          : "bg-amber-500/90 text-white border-amber-400"
                       }`}
                     >
                       {mission.status}
@@ -327,32 +327,32 @@ export default function SpaceflightPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between bg-white">
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between text-xs font-mono text-slate-400">
+                    <div className="flex items-center justify-between text-xs font-mono text-slate-500">
                       <span className="flex items-center space-x-1">
-                        <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                        <Calendar className="w-3.5 h-3.5 text-blue-600" />
                         <span>{mission.year}</span>
                       </span>
-                      <span className="flex items-center space-x-1 text-slate-300">
-                        <Clock className="w-3.5 h-3.5 text-cyan-400" />
+                      <span className="flex items-center space-x-1 text-slate-700 font-semibold">
+                        <Clock className="w-3.5 h-3.5 text-blue-600" />
                         <span>{mission.duration}</span>
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                       {mission.name}
                     </h3>
 
-                    <p className="text-xs text-slate-300 font-light leading-relaxed line-clamp-3">
+                    <p className="text-xs text-slate-600 font-normal leading-relaxed line-clamp-3">
                       {mission.summary}
                     </p>
                   </div>
 
                   {/* Footer Stats */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono text-slate-500">
                     <span>VEHICLE: {mission.vehicle.split("/")[0]}</span>
-                    <span className="text-cyan-400 font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                    <span className="text-blue-600 font-bold flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
                       <span>INSPECT</span>
                       <ChevronRight className="w-4 h-4" />
                     </span>
@@ -364,8 +364,8 @@ export default function SpaceflightPage() {
         </div>
       </section>
 
-      {/* TRAINING & OPERATIONAL EXCELLENCE */}
-      <section className="py-24 px-6 sm:px-8 bg-[#07090d] border-t border-white/10">
+      {/* 3. TRAINING & OPERATIONAL EXCELLENCE (BLACK BACKGROUND) */}
+      <section className="py-24 px-6 sm:px-8 bg-[#050608] text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold tracking-widest uppercase">
@@ -398,7 +398,7 @@ export default function SpaceflightPage() {
             <div className="pt-4">
               <button
                 onClick={() => openInquiryModal("Astronaut Training Program Details")}
-                className="px-8 py-3.5 rounded-full bg-white text-black font-bold text-xs tracking-wider uppercase hover:bg-slate-200 transition-colors shadow-lg flex items-center space-x-2"
+                className="px-8 py-3.5 rounded-full bg-cyan-500 text-black font-bold text-xs tracking-wider uppercase hover:bg-cyan-400 transition-colors shadow-lg flex items-center space-x-2"
               >
                 <span>EXPLORE TRAINING CURRICULUM</span>
                 <ArrowRight className="w-4 h-4" />
@@ -414,6 +414,34 @@ export default function SpaceflightPage() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* 4. SOVEREIGN & CORPORATE PARTNERSHIP CTA (WHITE BACKGROUND) */}
+      <section className="py-20 px-6 sm:px-8 bg-white text-gray-900 text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-mono font-bold">
+            <Globe className="w-4 h-4 text-blue-600" />
+            <span>SOVEREIGN &amp; COMMERCIAL MISSION MANIFEST</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
+            Launch Your Scientific Payload or Sovereign Crew
+          </h2>
+
+          <p className="text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed text-base">
+            Partner with Planet Labs &amp; Metals for turnkey flight integration, astronaut preparation, and orbital refinery furnace access.
+          </p>
+
+          <div className="pt-4 flex flex-wrap justify-center gap-4">
+            <button
+              onClick={() => openInquiryModal("Commercial Flight Integration")}
+              className="px-9 py-4 rounded-full bg-black text-white font-bold text-xs tracking-wider uppercase hover:bg-gray-800 transition-colors shadow-xl flex items-center space-x-2"
+            >
+              <span>BOOK MISSION MANIFEST</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
