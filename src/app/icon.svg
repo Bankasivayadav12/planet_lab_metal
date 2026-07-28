@@ -1,0 +1,71 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="planetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <linearGradient id="metalGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94A3B8" />
+      <stop offset="50%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Outer Orbital Ring -->
+  <ellipse
+    cx="50"
+    cy="50"
+    rx="42"
+    ry="18"
+    transform="rotate(-28 50 50)"
+    stroke="#38BDF8"
+    stroke-width="4"
+    stroke-dasharray="180"
+    stroke-dashoffset="20"
+    opacity="0.95"
+  />
+
+  <!-- Central Planet / Metal Globe Base -->
+  <circle
+    cx="50"
+    cy="50"
+    r="24"
+    fill="url(#planetGrad)"
+    stroke="#E2E8F0"
+    stroke-width="1.5"
+  />
+
+  <!-- Metallic Crystalline Facets representing Metals -->
+  <path
+    d="M50 26 L68 40 L68 60 L50 74 L32 60 L32 40 Z"
+    fill="none"
+    stroke="url(#metalGrad)"
+    stroke-width="2.2"
+    opacity="0.9"
+  />
+  <path
+    d="M50 26 L50 74 M32 40 L68 60 M32 60 L68 40"
+    stroke="url(#metalGrad)"
+    stroke-width="1.2"
+    opacity="0.6"
+  />
+
+  <!-- Orbital Satellite Node -->
+  <circle
+    cx="80"
+    cy="32"
+    r="5.5"
+    fill="url(#accentGrad)"
+  />
+
+  <!-- Inner Core Accent -->
+  <circle cx="50" cy="50" r="6" fill="#60A5FA" opacity="0.95" />
+  <circle cx="50" cy="50" r="2.5" fill="#FFFFFF" />
+</svg>

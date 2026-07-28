@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "Planet Labs & Metals | Commercial Space Station & Zero-Gravity Titanium Refineries",
   description: "Planet Labs & Metals is building era-defining space infrastructure: commercial space stations, zero-gravity metallurgy refineries, and lunar surface extraction platforms.",
   keywords: ["Planet Labs & Metals", "Space Station", "Zero-G Metallurgy", "Titanium Alloys", "Commercial Spaceflight", "Lunar Mining", "Microgravity Refineries"],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
