@@ -1,0 +1,212 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { useContent } from "@/context/ContentContext";
+
+export default function AboutPage() {
+  const { openInquiryModal } = useContent();
+
+  const founders = [
+    {
+      name: "Sri Nidhi Rajpoot",
+      role: "Co-Founder, Financier & CEO",
+      bio: "Sri Nidhi Rajpoot serves as Financier & CEO. She directs executive strategy, commercial investments, international space accords, and orbital station infrastructure deployment.",
+      avatar: "SR",
+      gradient: "from-blue-700 via-indigo-800 to-slate-900",
+    },
+    {
+      name: "N. Prem Kumar",
+      role: "Co-Founder & Chief Metallurgist",
+      bio: "N. Prem Kumar serves as Chief Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
+      avatar: "PK",
+      gradient: "from-slate-800 via-zinc-900 to-black",
+    },
+  ];
+
+  const leadershipTeam = [
+    {
+      name: "Sri Nidhi Rajpoot",
+      role: "Financier & CEO",
+      avatar: "SR",
+      gradient: "from-blue-600 to-indigo-800",
+    },
+    {
+      name: "N. Prem Kumar",
+      role: "Chief Metallurgist",
+      avatar: "PK",
+      gradient: "from-slate-700 to-zinc-900",
+    },
+    {
+      name: "Verma Raju",
+      role: "Materials Appraiser & Quality Lead",
+      avatar: "VR",
+      gradient: "from-emerald-700 to-teal-900",
+    },
+    {
+      name: "S. Govind Rao",
+      role: "Operations & Logistics Coordinator",
+      avatar: "GR",
+      gradient: "from-cyan-700 to-blue-900",
+    },
+    {
+      name: "Dhanunjaya",
+      role: "Chief Legal Adviser",
+      avatar: "DJ",
+      gradient: "from-purple-800 to-slate-950",
+    },
+  ];
+
+  return (
+    <div className="pt-24 space-y-0 bg-[#050608] text-white">
+      {/* SECTION 1: HERO (DARK SPACE WITH SUBTLE GRID) */}
+      <section className="relative py-24 px-6 sm:px-8 border-b border-white/10 overflow-hidden bg-[#050608]">
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
+
+        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
+          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight max-w-4xl leading-tight text-white">
+            Meet the Team
+          </h1>
+        </div>
+      </section>
+
+      {/* SECTION 2: UNPARALLELED LEO EXPERTISE (WHITE LIGHT) */}
+      <section className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="space-y-3">
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+              Unparalleled LEO Expertise
+            </h2>
+            <div className="w-16 h-0.5 bg-orange-500" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <div className="lg:col-span-6 space-y-4">
+              <p>
+                Our team has been involved with every International Space Station mission since the program&apos;s inception.
+              </p>
+              <p>
+                We are making the possibilities of low-Earth Orbit accessible to visionary governments, researchers, manufacturers, and individuals. Because we believe microgravity is the most promising environment for innovation and problem-solving since the Internet.
+              </p>
+            </div>
+
+            <div className="lg:col-span-6 space-y-4">
+              <p>
+                In 2022, we successfully completed the first private mission to the International Space Station and we are currently building the first commercial space station; ensuring a brighter future for everyone on Earth and setting our course for life beyond it.
+              </p>
+              <p>
+                The leadership team includes world-class, specialized expertise in commercial utilization of microgravity, on-orbit operations, astronaut training, space medicine, space system architecture/design/development, engineering, marketing, and law.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: FOUNDERS (WHITE LIGHT) */}
+      <section className="py-24 px-6 sm:px-8 bg-[#f5f5f7] text-gray-900 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="space-y-3">
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+              Founders
+            </h2>
+            <div className="w-16 h-0.5 bg-orange-500" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-5 space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed pt-2">
+              <p className="font-bold text-gray-900 text-base">
+                Founded by Sri Nidhi Rajpoot and N. Prem Kumar.
+              </p>
+              <p>
+                <strong className="text-gray-900">Sri Nidhi Rajpoot</strong> is the Financier & CEO. She previously directed commercial engineering services, spaceflight mission investments, and commercial utilization of low-Earth orbit.
+              </p>
+              <p>
+                <strong className="text-gray-900">N. Prem Kumar</strong> is the Chief Metallurgist. He previously directed microgravity plasma arc furnace engineering, supervising orbital station materials processing and titanium crystallization.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {founders.map((founder, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-3xl bg-white border border-gray-200 p-6 space-y-4 shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                >
+                  <div className={`h-64 w-full rounded-2xl bg-gradient-to-br ${founder.gradient} text-white flex flex-col items-center justify-center p-6 text-center space-y-3 shadow-md group-hover:scale-[1.02] transition-transform`}>
+                    <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-2xl font-black font-mono">
+                      {founder.avatar}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-white">{founder.name}</h3>
+                      <p className="text-xs font-mono text-cyan-300 uppercase font-semibold pt-1">{founder.role}</p>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-gray-600 leading-relaxed font-light">
+                    {founder.bio}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: LEADERSHIP TEAM GRID (WHITE LIGHT MATCHING SCREENSHOTS 2 & 3) */}
+      <section id="team" className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="space-y-3">
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+              Leadership Team
+            </h2>
+            <div className="w-16 h-0.5 bg-orange-500" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {leadershipTeam.map((member, idx) => (
+              <div
+                key={idx}
+                className="space-y-3 group cursor-pointer"
+                onClick={() => openInquiryModal(`Executive Leadership Inquiry: ${member.name}`)}
+              >
+                <div className={`relative h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-6 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
+                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-2xl shadow-lg">
+                    {member.avatar}
+                  </div>
+                  <div className="pt-4 space-y-1">
+                    <h3 className="text-lg font-black text-white">{member.name}</h3>
+                    <p className="text-xs font-mono text-cyan-200 uppercase font-semibold">{member.role}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-0.5">
+                  <h4 className="text-sm font-black text-gray-900 group-hover:text-orange-500 transition-colors">
+                    {member.name}
+                  </h4>
+                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: CONTACT EXECUTIVE LEADERSHIP (WHITE LIGHT) */}
+      <section className="py-20 px-6 sm:px-8 bg-[#e8e9ec] text-gray-900 text-center border-t border-gray-200">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900">
+            Connect with Executive Leadership
+          </h2>
+          <p className="text-sm text-gray-600 font-normal">
+            For strategic partnerships, sovereign accords, and commercial inquiry.
+          </p>
+          <button
+            onClick={() => openInquiryModal("Executive Leadership Direct Contact")}
+            className="px-9 py-4 rounded-full bg-black hover:bg-orange-600 text-white font-bold text-xs tracking-wider uppercase transition-colors shadow-lg"
+          >
+            Contact Executive Leadership
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
