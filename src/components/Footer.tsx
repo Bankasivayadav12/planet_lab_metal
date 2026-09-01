@@ -142,7 +142,7 @@ export const Footer = () => {
                 href="mailto:contact@planetlabsmetals.com"
                 className="text-white hover:text-cyan-300 text-xs sm:text-sm font-semibold transition-colors block"
               >
-                contact@planetlabsmetals.com
+                contact@planetlabsandmetals.com
               </a>
             </div>
             <div className="space-y-1.5 pt-3 border-t border-white/20">
@@ -150,9 +150,9 @@ export const Footer = () => {
                 ADDRESS
               </span>
               <p className="text-slate-200 text-xs sm:text-sm font-light leading-relaxed">
-                45 Harrison Street, 4th Floor,<br />
+                645 Harrison Street, 4th Floor,<br />
                 San Francisco, California 94107,<br />
-                United States.``
+                United States.
               </p>
             </div>
           </div>
