@@ -43,12 +43,6 @@ export default function AboutClient() {
       gradient: "from-purple-700 via-indigo-900 to-slate-950",
     },
     {
-      name: "S. Govind Rao",
-      role: "Operations & Logistics Coordinator",
-      avatar: "GR",
-      gradient: "from-cyan-600 via-teal-700 to-blue-950",
-    },
-    {
       name: "Verma Raju",
       role: "Materials Appraiser & Quality Lead",
       avatar: "VR",
