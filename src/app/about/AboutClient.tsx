@@ -16,7 +16,7 @@ export default function AboutClient() {
     },
     {
       name: "N. Prem Kumar",
-      role: "Co-Founder & Chief Metallurgist",
+      role: "Chief Metallurgist",
       bio: "N. Prem Kumar serves as Chief Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
       avatar: "PK",
       gradient: "from-amber-700 via-orange-800 to-stone-950",
