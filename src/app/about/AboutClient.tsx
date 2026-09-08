@@ -42,18 +42,7 @@ export default function AboutClient() {
       avatar: "DJ",
       gradient: "from-purple-700 via-indigo-900 to-slate-950",
     },
-    {
-      name: "Verma Raju",
-      role: "Materials Appraiser & Quality Lead",
-      avatar: "VR",
-      gradient: "from-emerald-600 via-teal-700 to-slate-900",
-    },
-    {
-      name: "P. Suresh Kumar",
-      role: "Coordinator",
-      avatar: "PS",
-      gradient: "from-rose-600 via-pink-800 to-slate-900",
-    },
+
     {
       name: "Sunil Mishra",
       role: "Coordinator",
@@ -161,19 +150,31 @@ export default function AboutClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-xs sm:text-sm text-gray-700 leading-relaxed">
             <div className="lg:col-span-6 space-y-4">
               <p>
-                Our team has been involved with every International Space Station mission since the program&apos;s inception.
+                Our team has been involved with every International Space
+                Station mission since the program&apos;s inception.
               </p>
               <p>
-                We are making the possibilities of low-Earth Orbit accessible to visionary governments, researchers, manufacturers, and individuals. Because we believe microgravity is the most promising environment for innovation and problem-solving since the Internet.
+                We are making the possibilities of low-Earth Orbit accessible to
+                visionary governments, researchers, manufacturers, and
+                individuals. Because we believe microgravity is the most
+                promising environment for innovation and problem-solving since
+                the Internet.
               </p>
             </div>
 
             <div className="lg:col-span-6 space-y-4">
               <p>
-                In 2022, we successfully completed the first private mission to the International Space Station and we are currently building the first commercial space station; ensuring a brighter future for everyone on Earth and setting our course for life beyond it.
+                In 2022, we successfully completed the first private mission to
+                the International Space Station and we are currently building
+                the first commercial space station; ensuring a brighter future
+                for everyone on Earth and setting our course for life beyond it.
               </p>
               <p>
-                The leadership team includes world-class, specialized expertise in commercial utilization of microgravity, on-orbit operations, astronaut training, space medicine, space system architecture/design/development, engineering, marketing, and law.
+                The leadership team includes world-class, specialized expertise
+                in commercial utilization of microgravity, on-orbit operations,
+                astronaut training, space medicine, space system
+                architecture/design/development, engineering, marketing, and
+                law.
               </p>
             </div>
           </div>
@@ -196,10 +197,16 @@ export default function AboutClient() {
                 Founded by Sri Nidhi Rajpoot and N. Prem Kumar.
               </p>
               <p>
-                <strong className="text-gray-900">Sri Nidhi Rajpoot</strong> is the Financier &amp; CEO. She previously directed commercial engineering services, spaceflight mission investments, and commercial utilization of low-Earth orbit.
+                <strong className="text-gray-900">Sri Nidhi Rajpoot</strong> is
+                the Financier &amp; CEO. She previously directed commercial
+                engineering services, spaceflight mission investments, and
+                commercial utilization of low-Earth orbit.
               </p>
               <p>
-                <strong className="text-gray-900">N. Prem Kumar</strong> is the Chief Metallurgist. He previously directed microgravity plasma arc furnace engineering, supervising orbital station materials processing and titanium crystallization.
+                <strong className="text-gray-900">N. Prem Kumar</strong> is the
+                Chief Metallurgist. He previously directed microgravity plasma
+                arc furnace engineering, supervising orbital station materials
+                processing and titanium crystallization.
               </p>
             </div>
 
@@ -209,13 +216,19 @@ export default function AboutClient() {
                   key={idx}
                   className="rounded-3xl bg-white border border-gray-200 p-6 space-y-4 shadow-xl hover:shadow-2xl transition-all duration-300 group"
                 >
-                  <div className={`h-64 w-full rounded-2xl bg-gradient-to-br ${founder.gradient} text-white flex flex-col items-center justify-center p-6 text-center space-y-3 shadow-md group-hover:scale-[1.02] transition-transform`}>
+                  <div
+                    className={`h-64 w-full rounded-2xl bg-gradient-to-br ${founder.gradient} text-white flex flex-col items-center justify-center p-6 text-center space-y-3 shadow-md group-hover:scale-[1.02] transition-transform`}
+                  >
                     <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-2xl font-black font-mono shadow-inner">
                       {founder.avatar}
                     </div>
                     <div>
-                      <h3 className="text-xl font-black text-white">{founder.name}</h3>
-                      <p className="text-xs font-mono text-cyan-300 uppercase font-semibold pt-1">{founder.role}</p>
+                      <h3 className="text-xl font-black text-white">
+                        {founder.name}
+                      </h3>
+                      <p className="text-xs font-mono text-cyan-300 uppercase font-semibold pt-1">
+                        {founder.role}
+                      </p>
                     </div>
                   </div>
 
@@ -230,7 +243,10 @@ export default function AboutClient() {
       </section>
 
       {/* SECTION 4: FOREIGN / INTERNATIONAL OPERATIONS TEAM GRID */}
-      <section id="foreign-team" className="py-24 px-6 sm:px-8 bg-[#f8fafc] text-gray-900 border-b border-gray-200">
+      <section
+        id="foreign-team"
+        className="py-24 px-6 sm:px-8 bg-[#f8fafc] text-gray-900 border-b border-gray-200"
+      >
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="space-y-3">
             <div className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-bold uppercase tracking-widest">
@@ -247,15 +263,23 @@ export default function AboutClient() {
               <div
                 key={idx}
                 className="space-y-3 group cursor-pointer"
-                onClick={() => openInquiryModal(`International Team Inquiry: ${member.name}`)}
+                onClick={() =>
+                  openInquiryModal(`International Team Inquiry: ${member.name}`)
+                }
               >
-                <div className={`relative h-64 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-5 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
+                <div
+                  className={`relative h-64 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-5 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}
+                >
                   <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-xl shadow-lg">
                     {member.avatar}
                   </div>
                   <div className="pt-3 space-y-1">
-                    <h3 className="text-base font-black text-white">{member.name}</h3>
-                    <p className="text-[11px] font-mono text-cyan-200 uppercase font-semibold leading-tight">{member.role}</p>
+                    <h3 className="text-base font-black text-white">
+                      {member.name}
+                    </h3>
+                    <p className="text-[11px] font-mono text-cyan-200 uppercase font-semibold leading-tight">
+                      {member.role}
+                    </p>
                   </div>
                 </div>
 
@@ -265,8 +289,12 @@ export default function AboutClient() {
                       {member.name}
                     </h4>
                   </div>
-                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
-                  <p className="text-[10px] font-mono text-blue-600 font-bold uppercase">{member.location}</p>
+                  <p className="text-xs text-gray-500 font-mono uppercase">
+                    {member.role}
+                  </p>
+                  <p className="text-[10px] font-mono text-blue-600 font-bold uppercase">
+                    {member.location}
+                  </p>
                 </div>
               </div>
             ))}
@@ -275,7 +303,10 @@ export default function AboutClient() {
       </section>
 
       {/* SECTION 5: LEADERSHIP TEAM GRID */}
-      <section id="team" className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200">
+      <section
+        id="team"
+        className="py-24 px-6 sm:px-8 bg-white text-gray-900 border-b border-gray-200"
+      >
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="space-y-3">
             <div className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-mono font-bold uppercase tracking-widest">
@@ -292,15 +323,25 @@ export default function AboutClient() {
               <div
                 key={idx}
                 className="space-y-3 group cursor-pointer"
-                onClick={() => openInquiryModal(`Executive Leadership Inquiry: ${member.name}`)}
+                onClick={() =>
+                  openInquiryModal(
+                    `Executive Leadership Inquiry: ${member.name}`,
+                  )
+                }
               >
-                <div className={`relative h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-6 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}>
+                <div
+                  className={`relative h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} shadow-md flex flex-col items-center justify-center p-6 text-center border border-gray-200 group-hover:scale-105 transition-transform duration-500`}
+                >
                   <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white font-mono font-black text-2xl shadow-lg">
                     {member.avatar}
                   </div>
                   <div className="pt-4 space-y-1">
-                    <h3 className="text-lg font-black text-white">{member.name}</h3>
-                    <p className="text-xs font-mono text-cyan-200 uppercase font-semibold">{member.role}</p>
+                    <h3 className="text-lg font-black text-white">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-mono text-cyan-200 uppercase font-semibold">
+                      {member.role}
+                    </p>
                   </div>
                 </div>
 
@@ -308,7 +349,9 @@ export default function AboutClient() {
                   <h4 className="text-sm font-black text-gray-900 group-hover:text-orange-500 transition-colors">
                     {member.name}
                   </h4>
-                  <p className="text-xs text-gray-500 font-mono uppercase">{member.role}</p>
+                  <p className="text-xs text-gray-500 font-mono uppercase">
+                    {member.role}
+                  </p>
                 </div>
               </div>
             ))}
@@ -323,10 +366,15 @@ export default function AboutClient() {
             Connect with Executive Leadership &amp; International Offices
           </h2>
           <p className="text-sm text-gray-600 font-normal">
-            For strategic partnerships, sovereign accords, and commercial inquiry across North America &amp; Europe.
+            For strategic partnerships, sovereign accords, and commercial
+            inquiry across North America &amp; Europe.
           </p>
           <button
-            onClick={() => openInquiryModal("Executive Leadership & International Direct Contact")}
+            onClick={() =>
+              openInquiryModal(
+                "Executive Leadership & International Direct Contact",
+              )
+            }
             className="px-9 py-4 rounded-full bg-black hover:bg-orange-600 text-white font-bold text-xs tracking-wider uppercase transition-colors shadow-lg"
           >
             Contact Executive &amp; International Leadership
