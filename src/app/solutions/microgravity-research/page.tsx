@@ -282,7 +282,7 @@ export default function MicrogravityResearchPage() {
 
             <div className="space-y-1 font-mono text-xs text-slate-300 border-l-2 border-orange-500 pl-4">
               <p className="font-bold text-white text-sm">Planet Labs & Metals Research Directorate</p>
-              <p className="text-slate-400">Chief Metallurgy & Material Science Advisory Board</p>
+              <p className="text-slate-400">Metallurgy & Material Science Advisory Board</p>
             </div>
           </div>
         </div>

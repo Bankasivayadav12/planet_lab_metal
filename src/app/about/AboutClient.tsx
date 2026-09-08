@@ -16,8 +16,8 @@ export default function AboutClient() {
     },
     {
       name: "N. Prem Kumar",
-      role: "Chief Metallurgist",
-      bio: "N. Prem Kumar serves as Chief Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
+      role: "Metallurgist",
+      bio: "N. Prem Kumar serves as Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
       avatar: "PK",
       gradient: "from-amber-700 via-orange-800 to-stone-950",
     },
@@ -32,20 +32,26 @@ export default function AboutClient() {
     },
     {
       name: "N. Prem Kumar",
-      role: "Chief Metallurgist",
+      role: "Metallurgist",
       avatar: "PK",
       gradient: "from-amber-600 via-orange-700 to-stone-900",
     },
     {
       name: "Dhanunjaya",
-      role: "Chief Legal Adviser",
+      role: "Legal Adviser",
       avatar: "DJ",
       gradient: "from-purple-700 via-indigo-900 to-slate-950",
+    },
+    {
+      name: "Verma Raju",
+      role: "Coordinator",
+      avatar: "VR",
+      gradient: "from-emerald-600 via-teal-700 to-slate-900",
     },
 
     {
       name: "Sunil Mishra",
-      role: "Coordinator",
+      role: "Public relation officer(PRO)",
       avatar: "SM",
       gradient: "from-violet-600 via-purple-800 to-slate-950",
     },
@@ -89,7 +95,7 @@ export default function AboutClient() {
     },
     {
       name: "Felix Becker",
-      role: "Chief Automation & Robotics Engineer",
+      role: "Automation & Robotics Engineer",
       avatar: "FB",
       gradient: "from-rose-800 via-pink-900 to-slate-950",
       location: "Germany",
@@ -204,7 +210,7 @@ export default function AboutClient() {
               </p>
               <p>
                 <strong className="text-gray-900">N. Prem Kumar</strong> is the
-                Chief Metallurgist. He previously directed microgravity plasma
+                Metallurgist. He previously directed microgravity plasma
                 arc furnace engineering, supervising orbital station materials
                 processing and titanium crystallization.
               </p>
