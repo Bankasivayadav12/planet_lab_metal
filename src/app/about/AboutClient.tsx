@@ -6,22 +6,22 @@ import { useContent } from "@/context/ContentContext";
 export default function AboutClient() {
   const { openInquiryModal } = useContent();
 
-  const founders = [
-    {
-      name: "Sri Nidhi Rajpoot",
-      role: "Co-Founder, Financier & CEO",
-      bio: "Sri Nidhi Rajpoot serves as Financier & CEO. She directs executive strategy, commercial investments, international space accords, and orbital station infrastructure deployment.",
-      avatar: "SR",
-      gradient: "from-blue-700 via-indigo-800 to-slate-900",
-    },
-    {
-      name: "N. Prem Kumar",
-      role: "Metallurgist",
-      bio: "N. Prem Kumar serves as Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
-      avatar: "PK",
-      gradient: "from-amber-700 via-orange-800 to-stone-950",
-    },
-  ];
+  // const founders = [
+  //   {
+  //     name: "Sri Nidhi Rajpoot",
+  //     role: "Co-Founder, Financier & CEO",
+  //     bio: "Sri Nidhi Rajpoot serves as Financier & CEO. She directs executive strategy, commercial investments, international space accords, and orbital station infrastructure deployment.",
+  //     avatar: "SR",
+  //     gradient: "from-blue-700 via-indigo-800 to-slate-900",
+  //   },
+  //   {
+  //     name: "N. Prem Kumar",
+  //     role: "Metallurgist",
+  //     bio: "N. Prem Kumar serves as Metallurgist. He pioneered zero-g titanium-aluminide furnace crystallization, containerless levitation refining, and advanced orbital alloy formulation.",
+  //     avatar: "PK",
+  //     gradient: "from-amber-700 via-orange-800 to-stone-950",
+  //   },
+  // ];
 
   const leadershipTeam = [
     {
@@ -42,19 +42,20 @@ export default function AboutClient() {
       avatar: "DJ",
       gradient: "from-purple-700 via-indigo-900 to-slate-950",
     },
-    {
-      name: "Verma Raju",
-      role: "Coordinator",
-      avatar: "VR",
-      gradient: "from-emerald-600 via-teal-700 to-slate-900",
-    },
 
-    {
-      name: "Sunil Mishra",
-      role: "Public relation officer(PRO)",
-      avatar: "SM",
-      gradient: "from-violet-600 via-purple-800 to-slate-950",
-    },
+    // {
+    //   name: "Verma Raju",
+    //   role: "Coordinator",
+    //   avatar: "VR",
+    //   gradient: "from-emerald-600 via-teal-700 to-slate-900",
+    // },
+
+    // {
+    //   name: "Sunil Mishra",
+    //   role: "Public relation officer(PRO)",
+    //   avatar: "SM",
+    //   gradient: "from-violet-600 via-purple-800 to-slate-950",
+    // },
   ];
 
   const foreignTeam = [
@@ -187,66 +188,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      {/* SECTION 3: FOUNDERS (WHITE LIGHT) */}
-      <section className="py-24 px-6 sm:px-8 bg-[#f5f5f7] text-gray-900 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
-              Founders
-            </h2>
-            <div className="w-16 h-0.5 bg-orange-500" />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-5 space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed pt-2">
-              <p className="font-bold text-gray-900 text-base">
-                Founded by Sri Nidhi Rajpoot and N. Prem Kumar.
-              </p>
-              <p>
-                <strong className="text-gray-900">Sri Nidhi Rajpoot</strong> is
-                the Financier &amp; CEO. She previously directed commercial
-                engineering services, spaceflight mission investments, and
-                commercial utilization of low-Earth orbit.
-              </p>
-              <p>
-                <strong className="text-gray-900">N. Prem Kumar</strong> is the
-                Metallurgist. He previously directed microgravity plasma
-                arc furnace engineering, supervising orbital station materials
-                processing and titanium crystallization.
-              </p>
-            </div>
-
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {founders.map((founder, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-3xl bg-white border border-gray-200 p-6 space-y-4 shadow-xl hover:shadow-2xl transition-all duration-300 group"
-                >
-                  <div
-                    className={`h-64 w-full rounded-2xl bg-gradient-to-br ${founder.gradient} text-white flex flex-col items-center justify-center p-6 text-center space-y-3 shadow-md group-hover:scale-[1.02] transition-transform`}
-                  >
-                    <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-2xl font-black font-mono shadow-inner">
-                      {founder.avatar}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-black text-white">
-                        {founder.name}
-                      </h3>
-                      <p className="text-xs font-mono text-cyan-300 uppercase font-semibold pt-1">
-                        {founder.role}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-gray-600 leading-relaxed font-light">
-                    {founder.bio}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* SECTION 4: FOREIGN / INTERNATIONAL OPERATIONS TEAM GRID */}
       <section
@@ -307,6 +249,9 @@ export default function AboutClient() {
           </div>
         </div>
       </section>
+
+      {/* SECTION 3: FOUNDERS (WHITE LIGHT) */}
+      
 
       {/* SECTION 5: LEADERSHIP TEAM GRID */}
       <section
